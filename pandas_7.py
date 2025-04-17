@@ -1,5 +1,4 @@
 import json
-
 import pandas as pd
 
 obj = """{
@@ -17,8 +16,8 @@ print(result)
 # print(result['siblings'][0]['pets'])
 # 利用dumps方法将Python对象转换为JSON字符串
 asjson = json.dumps(result)
-# print(asjson)
-siblings = pd.DataFrame(result['siblings'],columns=['name','age'])
+print(asjson)
+siblings = pd.DataFrame(result['siblings'], columns=['name', 'age'])
 print(siblings)
 # read_json自动将JSON数据集按照指定次序转换为Series和DataFrame
 data = pd.read_json('json_1.json')
